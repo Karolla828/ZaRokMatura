@@ -472,3 +472,21 @@ function deleteSubjectTask(subjectName, index) {
 
     showSubject(subjectName);
 }
+function updateDaysLeft() {
+    const maturaDate = new Date(2027, 4, 4);
+    const today = new Date();
+
+    maturaDate.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+
+    const difference = maturaDate - today;
+    const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+    const daysElement = document.getElementById("days-left");
+
+    if (daysElement) {
+        daysElement.textContent = daysLeft;
+    }
+}
+
+updateDaysLeft();
