@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f6f3;
+    color: #2f2f2f;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 210px;
+    background: #fbfaf8;
+    border-right: 1px solid #ddd;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #f6f3f5;
+}
+
+.add-tab {
+    margin-top: auto;
+    border: 1px solid #ddd !important;
+}
+
+.content {
+    flex: 1;
+    padding: 28px 40px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.help-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero {
+    margin-top: 40px;
+    background: rgb(239, 179, 179);
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 520px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin: 0;
+}
+
+.hero h2 {
+    font-size: 54px;
+    margin: 10px 0 0;
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 420px;
+    border: 1px solid #ddd;
+}
+
+.close-button {
+    float: right;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-header button {
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.calendar-days div {
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+}
+
+.calendar-day {
+    height: 70px;
+    border: 1px solid #ddd;
+    background: #fbfaf8;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-day:hover {
+    background: #eeeeea;
+}
+
+.empty-day {
+    height: 70px;
+}
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #7ca97c;
+    transition: 0.3s;
+}
+#subjects-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#subjects-list button {
+    display: block;
+    width: 100%;
+}
+.sidebar,
+#subjects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#subjects-list {
+    gap: 10px;
+}
+
+.sidebar button,
+#subjects-list button {
+    display: block;
+    width: 100%;
+}
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fbfaf8;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+}
+
+.task-row button {
+    border: none;
+    background: transparent;
+    color: #777;
+    cursor: pointer;
+}
+
+.task-row button:hover {
+    color: #b00020;
+}
+.calendar-day.has-tasks {
+    background: #ede7ff;
+}
+
+.calendar-day.today {
+    border: 2px solid #d64545;
+    color: #d64545;
+    font-weight: bold;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>ZaRokMatura</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<script src="/static/script.js"></script>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+    <button onclick="showView('calendar')">Kalendarz</button>
+    <button onclick="showView('calculator')">Licznik zadań</button>
+    <button onclick="showView('notes')">Notatki</button>
+
+    <div id="subjects-list"></div>
+
+    <button class="add-tab" onclick="addSubject()">+ dodaj zakładkę</button>
+</aside>
+
+    <main class="content">
+        <header class="topbar">
+            <h1>ZaRokMatura</h1>
+            <button class="help-button" onclick="toggleHelp()">!</button>
+        </header>
+
+        <section class="hero">
+            <p>Do matury zostało:</p>
+            <h2>{{ days_left }} dni</h2>
+        </section>
+    </main>
+</div>
+<div id="help-modal" class="modal hidden">
+    <div class="modal-content">
+        <button class="close-button" onclick="toggleHelp()">×</button>
+        <h2>Instrukcja obsługi</h2>
+
+<p>
+Witaj w aplikacji ZaRokMatura! Mam nadzieję, że umili Ci ona przygotowania do egzaminu dojrzałości.
+</p>
+
+<ol>
+    <li>
+        W kalendarzu możesz dodawać listy rzeczy do zrobienia na poszczególne dni. Będzie widoczny także progres.
+    </li>
+
+    <li>
+        Licznik zadań służy do obliczania, ile zadań dziennie minimum musisz zrobić przy danej liczbie dni.
+    </li>
+
+    <li>
+        Notatki to przestrzeń, w której możesz zapisać ważne informacje.
+    </li>
+</ol>
+    </div>
+</div>
+</body>
+</html>
